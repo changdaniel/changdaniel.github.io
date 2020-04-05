@@ -31,7 +31,7 @@
             <span data-ty="input" data-ty-prompt="▲ daniel@mac-os:~">python3 script.py</span>
             <span data-ty="progress" data-ty-progressChar="·"></span>
             <span data-ty="input" data-ty-prompt="▲ daniel@mac-os:~">cat welcome.txt</span>
-            <span data-ty>Welcome to my personal website!</span>
+            <span data-ty>Welcome to my personal website! Click for music.</span>
             <span data-ty="input" data-ty-prompt="▲ daniel@mac-os:~">cd ./links</span>
             <span data-ty="input" data-ty-prompt="▲ daniel@mac-os:~/links">ls</span>
             <span data-ty>
@@ -49,21 +49,18 @@
 
         </div>
 
-        <!-- include and initialise termynal.js -->
         <script src="termynal/termynal.js" data-termynal-container="#termynal"></script>
-        <!-- <script>
-          var termynal = new Termynal('#termynal', {
-            typeDelay: 40,
-            lineDelay: 700,
-            lineData: [
-              { type: 'input', prompt: '▲', value: 'initializing' },
-              { type: 'progress', progressChar: '·' },
-              { value: 'Welcome to my personal website!'},
-              { type: 'input', prompt:'▲ ~', value: 'cd ./links' },
-              { type: 'input', prompt: '▲ ~/links', value: 'ls -a' },
-              { value: 'Github                                                   Linkedin        Resume'},
-            ]
-          });
-        </script> -->
+
+        <script>
+            document.addEventListener('click', musicPlay);
+            function musicPlay() {
+                macintosh = "https://ia601602.us.archive.org/1/items/MACINTOSHPLUS420_201705/MACINTOSH%20PLUS%20-%20%E3%83%AA%E3%82%B5%E3%83%95%E3%83%A9%E3%83%B3%E3%82%AF420%20_%20%E7%8F%BE%E4%BB%A3%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC.mp3"
+                document.getElementById("music").setAttribute("src", macintosh);
+                document.getElementById('music').play();
+                document.removeEventListener('click', musicPlay);
+            }
+        </script>
+        <audio autoplay id="music" src="" loop="loop"></audio>
+
     </body>
 </html>
