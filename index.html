@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Daniel personal</title>
+        <meta charset="utf-8">
+        <!-- include the termynal stylesheet -->
+        <link rel="stylesheet" href="index.css">
+        <!-- some custom styles for the page -->
+        <link href="https://fonts.googleapis.com/css?family=Fira+Mono">
+        <style>
+            body {
+                --color-bg: #ddd;
+                --color-text: #1a1e24;
+                --color-text-subtle: #D76D77;
+
+                padding: 0; margin: 0;
+                background: -webkit-linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+                background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+                width: 100%;
+                min-height: 100vh;
+                display: -webkit-box; display: -ms-flexbox; display: flex;
+                -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+                -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
+                -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- the termynal container -->
+        <div id="termynal" data-termynal data-ty-typeDelay="40" data-ty-lineDelay="700">
+            <span data-ty="input" data-ty-prompt="▲ daniel@mac-os:~">python3 script.py</span>
+            <span data-ty="progress" data-ty-progressChar="·"></span>
+            <span data-ty="input" data-ty-prompt="▲ daniel@mac-os:~">cat welcome.txt</span>
+            <span data-ty>Welcome to my personal website!</span>
+            <span data-ty="input" data-ty-prompt="▲ daniel@mac-os:~">cd ./links</span>
+            <span data-ty="input" data-ty-prompt="▲ daniel@mac-os:~/links">ls</span>
+            <span data-ty>
+                <ul>
+                    <li><a href="#">Github</a></li>
+                    <li><a href="#">Linkedin</a></li>
+                    <li><a href="#">Resume</a></li>
+                    <li><a href="#">Email</a></li>
+                </ul>
+            </span>
+            <span data-ty="input" data-ty-prompt="▲ daniel@mac-os:~/links">cat ../needs.txt</span>
+            <span data-ty>Looking for Fall 2020 🍁 and Winter 2020 🐧 SWE Internships!</span>
+            <span data-ty="input" data-ty-prompt="▲ daniel@mac-os:~/links"></span>
+
+
+        </div>
+
+        <!-- include and initialise termynal.js -->
+        <script src="termynal/termynal.js" data-termynal-container="#termynal"></script>
+        <!-- <script>
+          var termynal = new Termynal('#termynal', {
+            typeDelay: 40,
+            lineDelay: 700,
+            lineData: [
+              { type: 'input', prompt: '▲', value: 'initializing' },
+              { type: 'progress', progressChar: '·' },
+              { value: 'Welcome to my personal website!'},
+              { type: 'input', prompt:'▲ ~', value: 'cd ./links' },
+              { type: 'input', prompt: '▲ ~/links', value: 'ls -a' },
+              { value: 'Github                                                   Linkedin        Resume'},
+            ]
+          });
+        </script> -->
+    </body>
+</html>
